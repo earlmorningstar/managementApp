@@ -7,9 +7,9 @@ export default function NewProject({onAdd}) {
   const dueDate = useRef();
 
   function handleSave()  {
-    enteredTitle = title.current.value;
-    enteredDescription = description.current.value;
-    enteredDueDate = dueDate.current.value;
+    const enteredTitle = title.current.value;
+    const enteredDescription = description.current.value;
+    const enteredDueDate = dueDate.current.value;
 
     //Validataion
     onAdd ({
@@ -37,9 +37,9 @@ export default function NewProject({onAdd}) {
         </menu>
 
         <div>
-          <Input ref={title} type='text' label="Title" />
+          <Input ref={title} type="text" label="Title" />
           <Input ref={description} label="Description" textarea />
-          <Input ref={dueDate} type='date' label="Due Date" />
+          <Input ref={dueDate} type="date" label="Due Date" />
         </div>
       </div>
     </>
